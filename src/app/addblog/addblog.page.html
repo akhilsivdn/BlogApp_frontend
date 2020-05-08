@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ADD BLOG POST</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #form="ngForm" (ngSubmit)="logForm(form)">  
+
+        <ion-item class="ion-no-padding">
+            <ion-label position="stacked">Title</ion-label>
+            <ion-input [(ngModel)]="title" name="title" required></ion-input>
+          </ion-item>
+          <ion-item class="ion-no-padding">
+            <ion-label position="stacked">Description</ion-label>
+            <ion-textarea rows="5" [(ngModel)]="description" name="description"></ion-textarea>
+          </ion-item>
+
+          <ion-item class="ion-no-padding">
+              <ion-label position="stacked">Post Image</ion-label>
+              <ion-input type="file" accept="image/*" (change)="changeListener($event)"></ion-input>
+          </ion-item>
+
+          <ion-button type="submit" class="ion-padding" expand="block" color="primary">Add Post</ion-button>
+      </form>
+      
+</ion-content>

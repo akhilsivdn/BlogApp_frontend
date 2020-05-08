@@ -1,0 +1,21 @@
+<ion-content>
+  <div>
+    <img src="{{post.postImage}}" class="postImage" />
+  </div>
+  <div class="wrapper">
+    <h3>{{post.title}}</h3>
+    <ion-label>{{post.description}}</ion-label>
+    <h6>Posted by:</h6>
+    <div class="postedby">
+      <ion-avatar>
+        <img src="{{post.author.profileImage}}" />
+      </ion-avatar>
+      <ion-label>{{post.author.name}}</ion-label>
+    </div>
+  </div>
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button color="light" (click)="goback()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
